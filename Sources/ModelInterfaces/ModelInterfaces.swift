@@ -3,6 +3,9 @@ import UIKit
 public protocol AccountModelProtocol: AnyObject {
     var profile: ProfileModelProtocol { get set }
     var blockedIds: Set<String> { get set }
+    var friendIds: Set<String> { get set }
+    var requestIds: Set<String> { get set }
+    var waitingsIds: Set<String> { get set }
 }
 
 public protocol ProfileModelProtocol {
