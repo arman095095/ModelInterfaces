@@ -36,3 +36,11 @@ public protocol PostModelProtocol: AnyObject {
     var likedByMe: Bool { get }
     var ownerMe: Bool { get }
 }
+
+public enum RemovedProfileConstants: String {
+    case title = "Профиль удален"
+    case imageURL = "https://okeygeek.ru/wp-content/uploads/2017/07/sobaka.jpg"
+    case name = "DELETED"
+    case info = "Пользователь удалил свой профиль"
+    case postsCount = "0"
+}
