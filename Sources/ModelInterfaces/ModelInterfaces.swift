@@ -39,7 +39,7 @@ public protocol PostModelProtocol: AnyObject {
 
 public enum RemovedProfileConstants: String {
     case title = "Профиль удален"
-    case imageURL = "https://okeygeek.ru/wp-content/uploads/2017/07/sobaka.jpg"
+    case imageURL = "https://miro.medium.com/max/1400/1*Bvkn3ol6fCOuzAM42B2Afw.jpeg"
     case name = "DELETED"
     case info = "Пользователь удалил свой профиль"
     case postsCount = "0"
