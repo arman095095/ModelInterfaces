@@ -23,6 +23,16 @@ public protocol ProfileModelProtocol {
     var postsCount: Int { get set }
 }
 
+public protocol ChatModelProtocol {
+    var friend: ProfileModelProtocol { get }
+    var friendID: String { get }
+}
+
+public protocol RequestModelProtocol {
+    var sender: ProfileModelProtocol { get }
+    var senderID: String { get }
+}
+
 public protocol PostModelProtocol: AnyObject {
     var userID: String { get }
     var likersIds: [String] { get }
