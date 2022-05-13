@@ -26,6 +26,27 @@ public protocol ProfileModelProtocol {
 public protocol ChatModelProtocol {
     var friend: ProfileModelProtocol { get }
     var friendID: String { get }
+    var typing: Bool { get set }
+    var messages: [MessageModelProtocol] { get }
+    var newMessages: [MessageModelProtocol] { get }
+    var notSendedMessages: [MessageModelProtocol] { get }
+    var notLookedMessages: [MessageModelProtocol] { get }
+}
+
+public enum MessageType {
+    case text(content: String)
+    case audio(url: String, duration: Float)
+    case image(url: String, ratio: Double)
+}
+
+public protocol MessageModelProtocol {
+    var senderID: String { get }
+    var adressID: String  { get }
+    var date: Date { get }
+    var id : String { get }
+    var firstOfDate: Bool  { get }
+    var sendingStatus: String { get }
+    var type: MessageType { get set }
 }
 
 public protocol RequestModelProtocol {
