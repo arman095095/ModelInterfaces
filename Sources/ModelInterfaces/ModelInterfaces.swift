@@ -51,7 +51,7 @@ public protocol MessageModelProtocol {
     var date: Date { get }
     var id : String { get }
     var firstOfDate: Bool  { get }
-    var sendingStatus: SendingStatus { get }
+    var sendingStatus: SendingStatus? { get }
     var type: MessageType { get set }
 }
 
