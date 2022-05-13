@@ -33,7 +33,7 @@ public protocol ChatModelProtocol {
     var notLookedMessages: [MessageModelProtocol] { get }
 }
 
-public enum SendingStatus {
+public enum SendingStatus: String {
     case waiting
     case sended
     case looked
