@@ -23,11 +23,11 @@ public protocol ProfileModelProtocol {
     var postsCount: Int { get set }
 }
 
-public protocol ChatModelProtocol {
+public protocol ChatModelProtocol: AnyObject {
     var friend: ProfileModelProtocol { get }
     var friendID: String { get }
     var typing: Bool { get set }
-    var messages: [MessageModelProtocol] { get }
+    var messages: [MessageModelProtocol] { get set }
     var newMessages: [MessageModelProtocol] { get }
     var notSendedMessages: [MessageModelProtocol] { get }
     var notLookedMessages: [MessageModelProtocol] { get }
