@@ -28,9 +28,9 @@ public protocol ChatModelProtocol: AnyObject {
     var friendID: String { get }
     var typing: Bool { get set }
     var messages: [MessageModelProtocol] { get set }
-    var newMessages: [MessageModelProtocol] { get }
-    var notSendedMessages: [MessageModelProtocol] { get }
-    var notLookedMessages: [MessageModelProtocol] { get }
+    var newMessages: [MessageModelProtocol] { get set }
+    var notSendedMessages: [MessageModelProtocol] { get set }
+    var notLookedMessages: [MessageModelProtocol] { get set }
 }
 
 public enum SendingStatus: String {
