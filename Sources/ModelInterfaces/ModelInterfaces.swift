@@ -33,6 +33,12 @@ public protocol ChatModelProtocol {
     var notLookedMessages: [MessageModelProtocol] { get }
 }
 
+public enum SendingStatus {
+    case waiting
+    case sended
+    case looked
+}
+
 public enum MessageType {
     case text(content: String)
     case audio(url: String, duration: Float)
@@ -45,7 +51,7 @@ public protocol MessageModelProtocol {
     var date: Date { get }
     var id : String { get }
     var firstOfDate: Bool  { get }
-    var sendingStatus: String { get }
+    var sendingStatus: SendingStatus { get }
     var type: MessageType { get set }
 }
 
