@@ -55,7 +55,7 @@ public enum MessageContentType {
     case image(url: String, ratio: Double)
 }
 
-public protocol MessageModelProtocol {
+public protocol MessageModelProtocol: AnyObject {
     var senderID: String { get }
     var adressID: String  { get }
     var date: Date { get }
