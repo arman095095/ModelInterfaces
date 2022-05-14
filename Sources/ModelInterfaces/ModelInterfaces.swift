@@ -58,10 +58,10 @@ public enum MessageContentType {
 public protocol MessageModelProtocol: AnyObject {
     var senderID: String { get }
     var adressID: String  { get }
-    var date: Date { get }
+    var date: Date { get set }
     var id : String { get }
-    var firstOfDate: Bool  { get }
-    var sendingStatus: SendingStatus? { get }
+    var firstOfDate: Bool  { get set }
+    var sendingStatus: SendingStatus? { get set }
     var type: MessageContentType { get set }
 }
 
