@@ -28,6 +28,7 @@ public protocol ChatModelProtocol: AnyObject {
     var friendID: String { get }
     var typing: Bool { get set }
     var lastMessage: MessageModelProtocol? { get }
+    var messages: [MessageModelProtocol] { get set }
     var newMessagesCount: Int { get }
     var notSendedMessages: [MessageModelProtocol] { get set }
 }
