@@ -47,6 +47,7 @@ public enum SendingStatus: String {
     case waiting
     case sended
     case looked
+    case incoming
 }
 
 public enum MessageContentType {
