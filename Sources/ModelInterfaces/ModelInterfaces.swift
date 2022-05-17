@@ -43,11 +43,12 @@ public protocol MessangerChatModelProtocol: AnyObject {
     var notLookedMessages: [MessageModelProtocol] { get set }
 }
 
-public enum SendingStatus: String {
+public enum Status: String {
     case waiting
     case sended
     case looked
     case incoming
+    case incomingNew
 }
 
 public enum MessageContentType {
@@ -62,7 +63,7 @@ public protocol MessageModelProtocol: AnyObject {
     var date: Date { get set }
     var id : String { get }
     var firstOfDate: Bool  { get set }
-    var sendingStatus: SendingStatus? { get set }
+    var status: Status? { get set }
     var type: MessageContentType { get set }
 }
 
